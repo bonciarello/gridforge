@@ -1,0 +1,87 @@
+/* ============================================
+   LivePreview
+   ============================================ */
+
+.preview-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.preview-title {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.preview-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-soft);
+  padding: 2px var(--space-2);
+  border-radius: 999px;
+}
+
+/* --- Stage — engineering paper pattern --- */
+.preview-stage {
+  padding: var(--space-6);
+  background-color: #F0F4FF;
+  background-image:
+    radial-gradient(circle, #CBD5E1 1px, transparent 1px);
+  background-size: 20px 20px;
+  min-height: 200px;
+  overflow: auto;
+}
+
+/* --- Grid --- */
+.preview-grid {
+  min-height: 120px;
+}
+
+/* --- Cell --- */
+.preview-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0,0,0,0.06);
+  min-height: 48px;
+  transition: background-color 200ms ease;
+}
+
+.preview-cell-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  user-select: none;
+}
+
+/* --- Empty state --- */
+.preview-empty {
+  padding: var(--space-10) var(--space-6);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 600px) {
+  .preview-stage {
+    padding: var(--space-4);
+  }
+}
