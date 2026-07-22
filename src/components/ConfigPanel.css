@@ -237,3 +237,16 @@
 .gap-inline-input::placeholder {
   color: var(--border-strong);
 }
+
+/* --- Mobile overflow fix: fieldset and flex column don't shrink below
+   their content's intrinsic min-width by default (fieldset UA quirk +
+   unset input min-width in a column flex), which blows out .app-sidebar
+   at narrow viewports. --- */
+@media (max-width: 600px) {
+  .block-group {
+    min-width: 0;
+  }
+  .gap-inline {
+    min-width: 0;
+  }
+}
